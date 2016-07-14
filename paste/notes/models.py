@@ -6,9 +6,9 @@ from django.db import models
 class Notes(models.Model):
 	body = models.TextField(verbose_name='Body')
 	publish_date = models.DateTimeField(verbose_name='Created at',
-										auto_now_add=True)
+                                     auto_now_add=True)
 	addresee = models.CharField(verbose_name='Addresee', blank=True, null=True,
-								max_length=255)
+							max_length=255)
 	title = models.CharField(verbose_name='Title', max_length=20, default="White title")
 
 	def __str__(self):
